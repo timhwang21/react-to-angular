@@ -21,9 +21,7 @@
       "git add"
     ]
   },
-  "dependencies": {
-    "lodash.uniqueid": "^4.0.1"
-  },
+  "dependencies": {},
   "peerDependencies": {
     "@angular/common": "^4.0.0 || ^5.2.0",
     "@angular/compiler": "^4.0.0 || ^5.2.0",
@@ -47,7 +45,6 @@
     "@angular/platform-browser-dynamic": "^4.0.0 || ^5.2.0",
     "@types/jasmine": "~2.8.3",
     "@types/jasminewd2": "~2.0.2",
-    "@types/lodash": "^4.14.98",
     "@types/node": "~6.0.60",
     "@types/react": "^16.0.35",
     "@types/react-dom": "^16.0.3",

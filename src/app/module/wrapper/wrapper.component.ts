@@ -1,10 +1,8 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Component, Input, OnInit, OnChanges, AfterViewInit } from '@angular/core';
-import * as _uniqueId from 'lodash.uniqueId';
 
-// Hack to get Rollup bundling working
-const uniqueId = _uniqueId;
+let uniqueId = 0;
 
 @Component({
   selector: 'react-wrapper',
@@ -18,7 +16,7 @@ export class WrapperComponent implements OnInit, OnChanges, AfterViewInit {
   node: HTMLElement;
 
   ngOnInit() {
-    this.id = uniqueId('React_');
+    this.id = 'React_' + uniqueId++;
   }
 
   ngAfterViewInit() {
