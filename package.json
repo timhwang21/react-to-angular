@@ -9,11 +9,17 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "packagr": "ng-packagr -p ng-package.json",
     "precommit": "lint-staged",
     "prettier": "prettier --write --print-width 120 --single-quote"
   },
+  "private": false,
   "lint-staged": {
-    "*.{js,ts,json,css,md}": ["yarn lint", "yarn prettier", "git add"]
+    "*.{js,ts,json,css,md}": [
+      "yarn lint",
+      "yarn prettier",
+      "git add"
+    ]
   },
   "dependencies": {
     "lodash.uniqueid": "^4.0.1"
@@ -56,6 +62,7 @@
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
     "lint-staged": "^6.1.0",
+    "ng-packagr": "^1.6.0",
     "prettier": "^1.10.2",
     "protractor": "~5.1.2",
     "react": "^15.0.0 || ^16.0.0",

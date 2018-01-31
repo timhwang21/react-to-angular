@@ -3,12 +3,7 @@
   "compilerOptions": {
     "outDir": "../out-tsc/app",
     "baseUrl": "./",
-    "module": "es2015",
-    "types": [
-      "react",
-      "react-dom",
-      "lodash"
-    ]
+    "module": "es2015"
   },
   "exclude": [
     "test.ts",
