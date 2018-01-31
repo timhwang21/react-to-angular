@@ -8,7 +8,12 @@
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "precommit": "lint-staged",
+    "prettier": "prettier --write --print-width 120 --single-quote"
+  },
+  "lint-staged": {
+    "*.{js,ts,json,css,md}": ["yarn lint", "yarn prettier", "git add"]
   },
   "dependencies": {
     "lodash.uniqueid": "^4.0.1"
