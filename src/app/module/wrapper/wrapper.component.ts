@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { createElement as e } from 'react';
 import * as ReactDOM from 'react-dom';
 import { Component, Input, OnInit, OnChanges, AfterViewInit } from '@angular/core';
 
@@ -31,6 +31,6 @@ export class WrapperComponent implements OnInit, OnChanges, AfterViewInit {
   }
 
   render() {
-    ReactDOM.render(React.createElement(this.component, this.props), this.node);
+    ReactDOM.render(e(this.component, this.props), this.node);
   }
 }

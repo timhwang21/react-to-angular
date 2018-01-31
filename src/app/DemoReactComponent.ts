@@ -1,11 +1,10 @@
-import * as React from 'react';
-const e = React.createElement;
+import { createElement as e, Component } from 'react';
 
 export interface DemoState {
   value: number;
 }
 
-export default class DemoComponent extends React.Component<void, DemoState> {
+export default class DemoComponent extends Component<void, DemoState> {
   state: any = {
     value: 0
   };
