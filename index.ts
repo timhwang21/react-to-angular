@@ -1,1 +1,1 @@
-export * from './src/app/module/wrapper/wrapper.module';
+export * from './src/app/module/react-wrapper/react-wrapper.module';

@@ -5,10 +5,10 @@ import { Component, Input, OnInit, OnChanges, AfterViewInit } from '@angular/cor
 let uniqueId = 0;
 
 @Component({
-  selector: 'react-wrapper',
+  selector: 'r2a-react-wrapper',
   template: `<div [id]="id"></div>`
 })
-export class WrapperComponent implements OnInit, OnChanges, AfterViewInit {
+export class ReactWrapperComponent implements OnInit, OnChanges, AfterViewInit {
   @Input() component: any;
   @Input() props: any;
 

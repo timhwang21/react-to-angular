@@ -2,11 +2,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { WrapperModule } from './module/wrapper/wrapper.module';
+import { ReactWrapperModule } from './module/react-wrapper/react-wrapper.module';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, WrapperModule],
+  imports: [BrowserModule, ReactWrapperModule],
   providers: [],
   bootstrap: [AppComponent]
 })
