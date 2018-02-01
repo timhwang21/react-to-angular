@@ -16,8 +16,8 @@
   "private": false,
   "lint-staged": {
     "*.{js,ts,json,css,md}": [
-      "yarn lint",
       "yarn prettier",
+      "yarn lint --fix",
       "git add"
     ]
   },
