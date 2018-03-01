@@ -1,6 +1,6 @@
 import { createElement as e } from 'react';
 import * as ReactDOM from 'react-dom';
-import { Component, Input, OnInit, OnChanges, AfterViewInit } from '@angular/core';
+import { Component, Input, OnInit, OnChanges, OnDestroy, AfterViewInit } from '@angular/core';
 
 let uniqueId = 0;
 
@@ -8,7 +8,7 @@ let uniqueId = 0;
   selector: 'r2a-react-wrapper',
   template: `<div [id]="id"></div>`
 })
-export class ReactWrapperComponent implements OnInit, OnChanges, AfterViewInit {
+export class ReactWrapperComponent implements OnInit, OnChanges, OnDestroy, AfterViewInit {
   @Input() component: any;
   @Input() props: any;
 
@@ -30,7 +30,17 @@ export class ReactWrapperComponent implements OnInit, OnChanges, AfterViewInit {
     }
   }
 
+  ngOnDestroy() {
+    if (this.node) {
+      this.destroy();
+    }
+  }
+
   render() {
     ReactDOM.render(e(this.component, this.props), this.node);
+  }
+
+  destroy() {
+    ReactDOM.unmountComponentAtNode(this.node);
   }
 }
