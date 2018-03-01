@@ -1,6 +1,6 @@
 {
   "name": "react-to-angular",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -15,11 +15,7 @@
   },
   "private": false,
   "lint-staged": {
-    "*.{js,ts,json,css,md}": [
-      "yarn prettier",
-      "yarn lint --fix",
-      "git add"
-    ]
+    "*.{js,ts,json,css,md}": ["yarn prettier", "yarn lint --fix", "git add"]
   },
   "dependencies": {},
   "peerDependencies": {
